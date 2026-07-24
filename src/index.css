@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-outfit: "Outfit", sans-serif;
+   --font-onest: "Onest", sans-serif;
+  --font-dmSans: "DM Sans", sans-serif;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.feature-slider {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+  will-change: transform;
+}
+
+.feature-slider:hover {
+  animation-play-state: paused;
+}
+
+.feature-track {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
