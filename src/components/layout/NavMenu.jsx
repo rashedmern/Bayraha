@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Container from "../ui/Container";
-import Dropdown from "./Dropdown";
+import Dropdown from "./DropDown";
 import { menuData } from "../../data/menuData";
 
 const menuItems = [
