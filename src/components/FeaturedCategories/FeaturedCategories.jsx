@@ -8,7 +8,6 @@ const FeaturedCategories = () => {
         {/* Heading */}
         <h2 className="text-center font-onest text-[40px] font-bold leading-none text-[#171318] lg:text-left lg:text-[72px]">
           Featured
-          <br />
           <span className="text-[#6E624F]">Categories</span>
         </h2>
 
