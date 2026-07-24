@@ -1,15 +1,13 @@
-import Header from "./components/layout/Header";
-import NavMenu from "./components/layout/NavMenu";
 import Hero from "./components/Hero/Hero";
 import FeaturedCategories from "./components/FeaturedCategories/FeaturedCategories";
+import Promo from "./components/Promo/Promo";
 
 function App() {
   return (
     <>
-      <Header />
-      <NavMenu />
       <Hero />
       <FeaturedCategories />
+      <Promo />
     </>
   );
 }

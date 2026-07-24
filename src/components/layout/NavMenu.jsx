@@ -17,38 +17,34 @@ const NavMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   return (
-    <nav className="w-full bg-[#171318] py-[20.5px]">
+    <nav className="w-full border-y border-white/10 bg-black/20 backdrop-blur-xl">
       <Container>
         <div
-          className="relative"
+          className="flex h-[74px] items-center justify-center gap-[76px]"
           onMouseLeave={() => setActiveMenu(null)}
         >
-          {/* Navbar */}
-          <div className="flex h-[54px] items-center justify-center gap-[76px] font-['Outfit'] text-[20px] font-normal text-white">
-            {menuItems.map((item) => (
+          {menuItems.map((item) => (
+            <div
+              key={item}
+              className="relative"
+              onMouseEnter={() => setActiveMenu(item)}
+            >
               <button
-                key={item}
-                onMouseEnter={() => setActiveMenu(item)}
-                className="group relative text-[20px] font-normal text-white transition-colors duration-300 hover:text-[#D3C096]"
+                className={`flex h-[44px] items-center justify-center whitespace-nowrap rounded-full px-4 font-outfit text-[20px] font-normal text-white transition-all duration-300 ${
+                  activeMenu === item
+                    ? "bg-white/10 backdrop-blur-xl"
+                    : "hover:bg-white/10 hover:backdrop-blur-xl"
+                }`}
               >
                 {item}
-
-                <span
-                  className={`absolute left-1/2 bottom-[-8px] h-[2px] bg-white transition-all duration-300 -translate-x-1/2 ${
-                    activeMenu === item
-                      ? "w-full"
-                      : "w-0 group-hover:w-full"
-                  }`}
-                />
               </button>
-            ))}
-          </div>
 
-          {/* Dropdown */}
-          <Dropdown
-            open={activeMenu !== null}
-            items={menuData[activeMenu] || []}
-          />
+              <Dropdown
+                open={activeMenu === item}
+                items={menuData[item] || []}
+              />
+            </div>
+          ))}
         </div>
       </Container>
     </nav>

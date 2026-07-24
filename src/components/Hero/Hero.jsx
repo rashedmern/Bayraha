@@ -1,3 +1,5 @@
+import Header from "../layout/Header";
+import NavMenu from "../layout/NavMenu";
 import { motion } from "framer-motion";
 import {
   BadgeDollarSign,
@@ -49,9 +51,14 @@ const Hero = () => {
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/45" />
+      {/* Navigation */}
+<div className="absolute top-0 left-0 z-30 w-full">
+  <Header />
+  <NavMenu />
+</div>
 
       {/* Hero Content */}
-      <Container className="relative z-10">
+      <Container className="relative z-10 pt-[170px]">
         <div className="flex min-h-[720px] items-center">
           <div className="w-[55%]">
             <h1 className="font-onest text-[76px] font-bold leading-[1.08] tracking-[-0.02em]">
@@ -79,24 +86,26 @@ const Hero = () => {
 
             <div className="mt-12 flex items-center gap-6">
               <button
-                className="
-                  flex
-                  h-[60px]
-                  w-[170px]
-                  items-center
-                  justify-center
-                  rounded-[18px]
-                  bg-white
-                  font-outfit
-                  text-[20px]
-                  font-semibold
-                  text-black
-                  transition-all
-                  duration-300
-                  hover:-translate-y-[2px]
-                  hover:bg-[#171318]
-                  hover:text-white
-                "
+               className="
+  flex
+  h-[60px]
+  w-[170px]
+  items-center
+  justify-center
+  rounded-[18px]
+  bg-white
+  font-outfit
+  text-[20px]
+  font-semibold
+  text-black
+  transition-all
+  duration-300
+  hover:-translate-y-[3px]
+  hover:scale-[1.03]
+  hover:bg-white
+  hover:text-black
+  hover:shadow-[0_10px_35px_rgba(255,255,255,0.30)]
+"
               >
                 Explore
               </button>
