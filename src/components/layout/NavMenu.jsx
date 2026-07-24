@@ -17,10 +17,10 @@ const NavMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
   return (
-    <nav className="w-full border-y border-white/10 bg-black/20 backdrop-blur-xl">
+    <nav className="hidden w-full border-y border-white/10 bg-black/20 backdrop-blur-xl lg:block">
       <Container>
         <div
-          className="flex h-[74px] items-center justify-center gap-[76px]"
+          className="flex h-[74px] items-center justify-center gap-6 xl:gap-[76px]"
           onMouseLeave={() => setActiveMenu(null)}
         >
           {menuItems.map((item) => (
@@ -30,7 +30,7 @@ const NavMenu = () => {
               onMouseEnter={() => setActiveMenu(item)}
             >
               <button
-                className={`flex h-[44px] items-center justify-center whitespace-nowrap rounded-full px-4 font-outfit text-[20px] font-normal text-white transition-all duration-300 ${
+                className={`flex h-[44px] items-center justify-center whitespace-nowrap rounded-full px-4 font-outfit text-[18px] xl:text-[20px] font-normal text-white transition-all duration-300 ${
                   activeMenu === item
                     ? "bg-white/10 backdrop-blur-xl"
                     : "hover:bg-white/10 hover:backdrop-blur-xl"

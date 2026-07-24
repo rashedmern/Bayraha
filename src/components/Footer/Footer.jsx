@@ -9,13 +9,15 @@ import { FiSend } from "react-icons/fi";
 const Footer = () => {
   return (
     <footer className="bg-[#171318] text-white">
-      <div className="mx-auto max-w-[1440px] px-6 py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
+      <div className="mx-auto w-full max-w-[1440px] px-4 py-12 sm:px-6 lg:px-6 lg:py-20">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-5 lg:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <h2 className="font-onest text-4xl font-bold">Bayraha</h2>
+          <div className="col-span-2 lg:col-span-2">
+            <h2 className="font-onest text-3xl font-bold lg:text-4xl">
+              Bayraha
+            </h2>
 
-            <p className="mt-6 max-w-md font-dmSans text-gray-400 leading-8">
+            <p className="mt-5 max-w-md font-dmSans leading-8 text-gray-400">
               Discover premium gadgets, electronics and lifestyle products for
               modern living. Experience quality, innovation and fast delivery.
             </p>
@@ -26,7 +28,7 @@ const Footer = () => {
                   <a
                     key={index}
                     href="#"
-                    className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-black"
                   >
                     <Icon size={18} />
                   </a>
@@ -39,7 +41,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-6 font-onest text-xl font-semibold">Shop</h3>
 
-            <ul className="space-y-4 text-gray-400 font-dmSans">
+            <ul className="space-y-4 font-dmSans text-gray-400">
               {[
                 "Laptops",
                 "Phones",
@@ -50,7 +52,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="transition-all duration-300 hover:text-white hover:pl-2"
+                    className="transition-all duration-300 hover:pl-2 hover:text-white"
                   >
                     {item}
                   </a>
@@ -63,7 +65,7 @@ const Footer = () => {
           <div>
             <h3 className="mb-6 font-onest text-xl font-semibold">Support</h3>
 
-            <ul className="space-y-4 text-gray-400 font-dmSans">
+            <ul className="space-y-4 font-dmSans text-gray-400">
               {[
                 "Contact Us",
                 "Track Order",
@@ -74,7 +76,7 @@ const Footer = () => {
                 <li key={item}>
                   <a
                     href="#"
-                    className="transition-all duration-300 hover:text-white hover:pl-2"
+                    className="transition-all duration-300 hover:pl-2 hover:text-white"
                   >
                     {item}
                   </a>
@@ -84,16 +86,16 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h3 className="mb-6 font-onest text-xl font-semibold">
               Newsletter
             </h3>
 
-            <p className="mb-5 text-gray-400 font-dmSans">
+            <p className="mb-5 font-dmSans text-gray-400">
               Subscribe to receive updates and exclusive offers.
             </p>
 
-            <div className="flex overflow-hidden rounded-full border border-white/10 bg-white/5">
+            <div className="flex max-w-[320px] overflow-hidden rounded-full border border-white/10 bg-white/5 lg:max-w-none">
               <input
                 type="email"
                 placeholder="Email Address"
@@ -107,14 +109,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="my-14 h-px bg-white/10"></div>
+        <div className="my-12 h-px bg-white/10"></div>
 
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-500 font-dmSans">
+        <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:justify-between lg:text-left">
+          <p className="font-dmSans text-sm text-gray-500">
             © {new Date().getFullYear()} Bayraha. All Rights Reserved.
           </p>
 
-          <div className="flex gap-6 text-gray-400">
+          <div className="flex gap-6 text-sm text-gray-400">
             <a href="#" className="transition hover:text-white">
               Terms
             </a>
@@ -128,7 +130,7 @@ const Footer = () => {
             </a>
           </div>
 
-          <div className="text-sm text-gray-500 font-dmSans">
+          <div className="font-dmSans text-sm text-gray-500">
             Secure Payments • Fast Delivery • 24/7 Support
           </div>
         </div>
