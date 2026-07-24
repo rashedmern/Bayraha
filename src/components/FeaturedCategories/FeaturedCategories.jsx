@@ -6,8 +6,7 @@ const FeaturedCategories = () => {
     <section className="py-12 sm:py-16 lg:py-20">
       <Container className="px-4 sm:px-6 lg:px-0">
         {/* Heading */}
-        <h2 className="font-onest text-[38px] font-bold leading-tight text-[#171318] sm:text-[48px] lg:text-[56px]">
-          Featured <span className="text-[#5B5142]">Categories</span>
+        <h2 className="text-center lg:text-left font-onest text-[40px] font-bold leading-none text-[#171318] lg:text-[72px]">
         </h2>
 
         {/* Categories Grid */}
